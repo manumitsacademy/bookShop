@@ -1,0 +1,10 @@
+<div class="row" style="display: flex;justify-content: space-around;">    
+    <div  *ngFor="let book of books" class="col-sm-2 card m-2" style="width:200px">
+        <img class="card-img-top" [src]="book.thumbnailUrl" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">{{book.title}}</h4>
+          <p class="card-text">Some example text.</p>
+          <button (click)="addToCart(book)">Add To Cart</button>
+        </div>
+    </div>
+</div>
